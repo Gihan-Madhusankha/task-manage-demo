@@ -2154,6 +2154,29 @@
             "rid": "win"
           }
         }
+      },
+      "TaskWebAPI.models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TaskWebAPI.models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskWebAPI.models.dll": {}
+        }
+      },
+      "TaskWebAPI.services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TaskWebAPI.models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TaskWebAPI.services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskWebAPI.services.dll": {}
+        }
       }
     }
   },
@@ -6296,13 +6319,24 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "TaskWebAPI.models/1.0.0": {
+      "type": "project",
+      "path": "../TaskWebAPI.models/TaskWebAPI.models.csproj",
+      "msbuildProject": "../TaskWebAPI.models/TaskWebAPI.models.csproj"
+    },
+    "TaskWebAPI.services/1.0.0": {
+      "type": "project",
+      "path": "../TaskWebAPI.services/TaskWebAPI.services.csproj",
+      "msbuildProject": "../TaskWebAPI.services/TaskWebAPI.services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.1",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "TaskWebAPI.services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6329,7 +6363,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "H:\\GDSE 59\\dotnet\\TaskWebAPI\\TaskWebAPI.services\\TaskWebAPI.services.csproj": {
+              "projectPath": "H:\\GDSE 59\\dotnet\\TaskWebAPI\\TaskWebAPI.services\\TaskWebAPI.services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

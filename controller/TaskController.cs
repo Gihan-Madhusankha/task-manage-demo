@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using TaskOne.models;
 using TaskOne.services;
 
 namespace TaskOne.controller;
@@ -9,11 +8,12 @@ namespace TaskOne.controller;
 public class TaskController : ControllerBase
 {
 
-    private TodoService _todoService;
-    public TaskController(TodoService todoService)
+    private ITodoRepository _todoService;
+    public TaskController(ITodoRepository repository)
     {
-        _todoService = todoService;
+        _todoService = repository;
     }
+    
     
     [HttpGet("{id?}")]
     public IActionResult GetTasks(int? id)

@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.1",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "TaskWebAPI.services": "1.0.0"
         },
         "runtime": {
           "TaskOne.dll": {}
@@ -1539,6 +1540,19 @@
             "fileVersion": "7.0.22.51805"
           }
         }
+      },
+      "TaskWebAPI.models/1.0.0": {
+        "runtime": {
+          "TaskWebAPI.models.dll": {}
+        }
+      },
+      "TaskWebAPI.services/1.0.0": {
+        "dependencies": {
+          "TaskWebAPI.models": "1.0.0"
+        },
+        "runtime": {
+          "TaskWebAPI.services.dll": {}
+        }
       }
     }
   },
@@ -2415,6 +2429,16 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "TaskWebAPI.models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaskWebAPI.services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
