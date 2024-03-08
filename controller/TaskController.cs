@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using TaskOne.models;
+using TaskOne.services;
 
 namespace TaskOne.controller;
 
@@ -6,11 +8,20 @@ namespace TaskOne.controller;
 [ApiController]
 public class TaskController : ControllerBase
 {
-    [HttpGet]
-    public IActionResult GetTasks()
+
+    private TodoService _todoService;
+    public TaskController(TodoService todoService)
     {
-        var tasks = new string[]{"Task 1", "Task 2", "Task 3", "Task 4"};
-        return Ok(tasks);
+        _todoService = todoService;
+    }
+    
+    [HttpGet("{id?}")]
+    public IActionResult GetTasks(int? id)
+    {
+        var allTodos = _todoService.GetAllTodos();
+        if (id is null) return Ok(allTodos);
+        allTodos = allTodos.Where(t => t.Id == id).ToList();
+        return Ok(allTodos);
     }
 
     [HttpPost]
@@ -18,24 +29,20 @@ public class TaskController : ControllerBase
     {
         return Ok();
     }
-    
-    
+
+
     [HttpPut]
     public IActionResult UpdateTask()
     {
         return Ok();
     }
-    
-    
+
+
     [HttpDelete]
     public IActionResult DeleteTask()
     {
         var isBool = true;
-        if ( isBool)
-        {
-            return BadRequest();
-        }
+        if (isBool) return BadRequest();
         return Ok();
     }
 }
-

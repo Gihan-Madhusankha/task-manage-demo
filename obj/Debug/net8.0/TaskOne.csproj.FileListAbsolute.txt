@@ -224,3 +224,4 @@ H:\GDSE 59\dotnet\TaskWebAPI\TaskOne\bin\Debug\net8.0\runtimes\win\lib\net7.0\Mi
 H:\GDSE 59\dotnet\TaskWebAPI\TaskOne\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 H:\GDSE 59\dotnet\TaskWebAPI\TaskOne\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 H:\GDSE 59\dotnet\TaskWebAPI\TaskOne\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+H:\GDSE 59\dotnet\TaskWebAPI\TaskOne\obj\Debug\net8.0\TaskOne.sourcelink.json
